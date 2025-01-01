@@ -1,0 +1,12 @@
+{% extends "stedcol/base_generic.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2>Request Mentorship from {{ mentor.user.username }}</h2>
+    <form method="post">
+      {% csrf_token %}
+      <textarea name="message" rows="4" cols="50" placeholder="Write your message here..."></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+{% endblock %}

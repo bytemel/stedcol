@@ -1,0 +1,12 @@
+{% extends "stedcol/base_generic.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2>Your Profile</h2>
+    <p>Welcome, {{ user.username }}!</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Your Role: {{ user.role }}</p>
+    <a href="{% url 'edit_profile' %}" style="color: #007BFF;">Edit Profile</a>
+    <a href="{% url 'course_list' %}">Browse Courses</a>
+  </div>
+{% endblock %}
